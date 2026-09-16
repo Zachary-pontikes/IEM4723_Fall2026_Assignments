@@ -20,4 +20,8 @@ docker build -t logistic_regression_layered:latest .
 docker run --name logistic_regression_app --volume C:\Infosys\IEM4723_Fall2026_Assignments\assignment1\layering\data:/home/iem4723/data logistic_regression_layered:latest
 git add Dockerfile
 git add data/logistic_regression_coefficients.csv
+#Question 4
+cd C:\Infosys\IEM4723_Fall2026_Assignments\assignment1\port_listening
+docker build -t port_listening_app:latest .
+docker run --name port_listening_app --publish 3333:8000 -d port_listening_app:latest
 
